@@ -1,0 +1,14 @@
+//
+//  File.swift
+//  
+//
+//  Created by Ruslan Serebriakov on 5/5/20.
+//
+
+import Foundation
+
+struct StructsCountCoverage: Coverage {
+    let title = "structs count"
+    let swift: Int
+    let objc: Int
+}
