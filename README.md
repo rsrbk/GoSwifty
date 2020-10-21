@@ -42,3 +42,41 @@ swift build -c release
 cd .build/release
 cp -f GoSwifty /usr/local/bin/go-swifty
 ```
+
+## Usage
+Simply:
+```sh
+go-swifty analyze /Your/Folder/Path
+```
+
+## Follow me on twitter
+I promise it's gonna be more interesting stuff there! [@rsrbk123](https://twitter.com/rsrbk123)
+
+## Check out my other libraries
+
+[SmileToUnlock](https://github.com/rsrbk/SmileToUnlock) - This library uses ARKit Face Tracking in order to catch a user's smile to unlock the screen.<br>
+[SRCountdownTimer](https://github.com/rsrbk/SRCountdownTimer) - a simple circle countdown with a configurable timer.<br>
+[SRAttractionsMap](https://github.com/rsrbk/SRAttractionsMap) - the map with attractions on which you can click and see the full description.
+
+## License
+ MIT License
+
+ Copyright (c) 2017 Ruslan Serebriakov <rsrbk1@gmail.com>
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
