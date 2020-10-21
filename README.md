@@ -18,7 +18,7 @@ A command line tool which gives you a comprehensive analysis of your codebase in
 ### Option 1 (via [Mint](https://github.com/yonaskolb/Mint))
 1. Install Mint via Homebrew:
 ```sh
-pod 'SmileToUnlock'
+brew install mint
 ```
 or manually:
 ```sh
@@ -30,6 +30,7 @@ swift run mint install yonaskolb/mint
 ```sh
 swift run mint install rsrbk/GoSwifty
 ```
+If you are receiving a permission error, try to find the command under `sudo` or refer to this [issue](https://github.com/yonaskolb/Mint/issues/188).
 ### Option 2 (manually)
 1. Clone the repo:
 ```sh
@@ -40,13 +41,13 @@ git clone https://github.com/rsrbk/GoSwifty.git
 cd GoSwifty
 swift build -c release
 cd .build/release
-cp -f GoSwifty /usr/local/bin/go-swifty
+cp -f GoSwifty /usr/local/bin/goswifty
 ```
 
 ## Usage
 Simply:
 ```sh
-go-swifty analyze /Your/Folder/Path
+goswifty analyze /Your/Folder/Path
 ```
 
 ## Follow me on twitter
