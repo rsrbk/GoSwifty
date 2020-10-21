@@ -32,12 +32,12 @@ struct Analyze: ParsableCommand {
     }
 
     private func printTitle(with tc: TerminalController) {
-        tc.write(">>>>>>> ", inColor: .black, bold: true)
+        tc.write(">>>>>>> ", inColor: .red, bold: true)
         tc.write("GoSwifty - Swift coverage analyzer", inColor: .red, bold: true)
-        tc.write(" <<<<<<<", inColor: .black, bold: true)
+        tc.write(" <<<<<<<", inColor: .red, bold: true)
     }
 
     private func printMetricsCount(with tc: TerminalController, coverages: [Coverage]) {
-        tc.write("We've analyzed your folder with \(coverages.count) metrics:", inColor: .black, bold: true)
+        tc.write("We've analyzed your folder with \(coverages.count) metrics:", inColor: .noColor, bold: true)
     }
 }

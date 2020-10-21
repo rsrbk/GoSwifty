@@ -24,7 +24,7 @@ extension Coverage {
 
     func write(with tc: TerminalController) {
         tc.endLine()
-        tc.write("> \(title.capitalizingFirstLetter())", inColor: .black, bold: true)
+        tc.write("> \(title.capitalizingFirstLetter())", inColor: .noColor, bold: true)
         tc.endLine()
         tc.write(">> Swift: ",  inColor: .green, bold: true)
         tc.write("\(swift) (\(swiftPercentage)%)",  inColor: .red, bold: true)

@@ -20,7 +20,7 @@ let package = Package(
         .target(
             name: "GoSwifty",
             dependencies: [
-                .product(name: "SwiftToolsSupport", package: "swift-tools-support-core"),
+                .product(name: "SwiftToolsSupport-auto", package: "swift-tools-support-core"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
         ]),
     ]
