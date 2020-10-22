@@ -65,7 +65,7 @@ I promise it's gonna be more interesting stuff there! [@rsrbk123](https://twitte
 ## License
  MIT License
 
- Copyright (c) 2017 Ruslan Serebriakov <rsrbk1@gmail.com>
+ Copyright (c) 2020 Ruslan Serebriakov <rsrbk1@gmail.com>
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
