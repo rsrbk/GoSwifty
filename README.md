@@ -13,6 +13,9 @@ A command line tool which gives you a comprehensive analysis of your codebase in
 - Swift structs count vs Objective-C structs count.
 
 ## Example (Wikipedia iOS App):
+<p align="center">
+    <img src="https://github.com/rsrbk/GoSwifty/blob/master/example.png?raw=true" alt="Blue"/>
+</p>
 
 ## Installation
 ### Option 1 (via [Mint](https://github.com/yonaskolb/Mint))
