@@ -29,7 +29,7 @@ git clone https://github.com/yonaskolb/Mint.git
 cd Mint
 swift run mint install yonaskolb/mint
 ```
-2. Run `GoSwifty` via Mint:
+2. Install `GoSwifty` via Mint:
 ```sh
 swift run mint install rsrbk/GoSwifty
 ```
@@ -41,7 +41,6 @@ git clone https://github.com/rsrbk/GoSwifty.git
 ```
 2. Open the folder and build the command line tool via Swift Package Manager
 ```sh
-cd GoSwifty
 swift build -c release
 cd .build/release
 cp -f GoSwifty /usr/local/bin/goswifty
