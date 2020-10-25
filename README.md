@@ -31,7 +31,7 @@ swift run mint install yonaskolb/mint
 ```
 2. Install `GoSwifty` via Mint:
 ```sh
-swift run mint install rsrbk/GoSwifty
+mint install rsrbk/GoSwifty
 ```
 If you are receiving a permission error, try to find the command under `sudo` or refer to this [issue](https://github.com/yonaskolb/Mint/issues/188).
 ### Option 2 (manually)
