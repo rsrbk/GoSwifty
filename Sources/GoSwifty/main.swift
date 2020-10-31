@@ -1,5 +1,4 @@
 import ArgumentParser
-import TSCBasic
 
 struct GoSwifty: ParsableCommand {
     static let configuration = CommandConfiguration(
