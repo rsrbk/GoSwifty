@@ -24,7 +24,7 @@ extension Coverage {
 
     func write(with tc: TerminalController) {
         tc.endLine()
-        tc.write("> \(title.capitalizingFirstLetter())", inColor: .noColor, bold: true)
+        tc.write("> \(title)", inColor: .noColor, bold: true)
         tc.endLine()
         tc.write(">> Swift: ",  inColor: .green, bold: true)
         tc.write("\(swift) (\(swiftPercentage)%)",  inColor: .red, bold: true)
@@ -32,15 +32,5 @@ extension Coverage {
         tc.write(">> Objective-C: ",  inColor: .cyan, bold: true)
         tc.write("\(objc) (\(objcPercentage)%)",  inColor: .red, bold: true)
         tc.endLine()
-    }
-}
-
-extension String {
-    func capitalizingFirstLetter() -> String {
-        return prefix(1).capitalized + dropFirst()
-    }
-
-    mutating func capitalizeFirstLetter() {
-        self = self.capitalizingFirstLetter()
     }
 }
