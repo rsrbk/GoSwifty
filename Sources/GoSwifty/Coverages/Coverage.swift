@@ -25,9 +25,9 @@ extension Coverage {
     func write() {
         print("")
         print("> \(title)".bold)
-        print(">> Swift: ".green.bold, terminator: "")
+        print(">> Swift: ".lightYellow.bold, terminator: "")
         print("\(swift) (\(swiftPercentage)%)".red.bold)
-        print(">> Objective-C: ".green.bold, terminator: "")
+        print(">> Objective-C: ".cyan.bold, terminator: "")
         print("\(objc) (\(objcPercentage)%)".red.bold)
     }
 }
