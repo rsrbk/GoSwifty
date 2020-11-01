@@ -12,8 +12,8 @@ struct Analyze: ParsableCommand {
 
     public static let configuration = CommandConfiguration(abstract: "Analyze the swift/objc ratio")
 
-    @Argument(help: "The root folder of your XCode project")
-    private var path: String
+    @Argument(help: "List of folders to analyze")
+    private var paths: [String]
 
     func run() throws {
         let analyzer = Analyzer(with: path)
