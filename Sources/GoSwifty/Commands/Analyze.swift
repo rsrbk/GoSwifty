@@ -28,7 +28,7 @@ struct Analyze: ParsableCommand {
     }
 
     private func printTitle() {
-        print(">>>>>>> GoSwifty - Swift coverage analyzer <<<<<<<".red.bold)
+        print(">>>>>>> GoSwifty - Swift coverage analyzer <<<<<<<".lightRed.bold)
     }
 
     private func printMetricsCount(coverages: [Coverage]) {
