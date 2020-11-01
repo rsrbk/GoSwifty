@@ -51,9 +51,12 @@ Simply:
 
 ```sh
 goswifty analyze /Your/Folder/Path
-goswifty analyze /Your/Folder/Path /Your/Other/Folder/Path
 ```
 
+You can also analyze multiple folders. The results will be combined from all the folders you've provided.
+```sh
+goswifty analyze /Your/Folder/Path /Your/Other/Folder/Path
+```
 ## Follow me on twitter
 I promise it's gonna be more interesting stuff there! [@rsrbk123](https://twitter.com/rsrbk123)
 
