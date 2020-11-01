@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import TSCBasic
+import Rainbow
 
 protocol Coverage {
     var title: String { get }
@@ -22,7 +22,7 @@ extension Coverage {
         [swift, objc].asPercentage[1]
     }
 
-    func write(with tc: TerminalController) {
+    func write() {
         tc.endLine()
         tc.write("> \(title)", inColor: .noColor, bold: true)
         tc.endLine()
