@@ -12,12 +12,12 @@ struct Analyze: ParsableCommand {
 
     public static let configuration = CommandConfiguration(abstract: "Analyze the swift/objc ratio")
 
-    @Argument(help: "The root folder of your XCode project")
-    private var path: String
+    @Argument(help: "List of folders to analyze")
+    private var paths: [String]
 
     func run() throws {
         guard let tc = TerminalController(stream: stdoutStream) else { return }
-        let analyzer = Analyzer(with: path)
+        let analyzer = Analyzer(with: paths)
 
         printIntro(with: tc, analyzer: analyzer)
         analyzer.coverages.forEach { $0.write(with: tc) }

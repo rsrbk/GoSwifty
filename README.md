@@ -48,8 +48,10 @@ cp -f GoSwifty /usr/local/bin/goswifty
 
 ## Usage
 Simply:
+
 ```sh
 goswifty analyze /Your/Folder/Path
+goswifty analyze /Your/Folder/Path /Your/Other/Folder/Path
 ```
 
 ## Follow me on twitter
