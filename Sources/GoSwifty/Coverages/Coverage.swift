@@ -23,14 +23,11 @@ extension Coverage {
     }
 
     func write() {
-        tc.endLine()
-        tc.write("> \(title)", inColor: .noColor, bold: true)
-        tc.endLine()
-        tc.write(">> Swift: ",  inColor: .green, bold: true)
-        tc.write("\(swift) (\(swiftPercentage)%)",  inColor: .red, bold: true)
-        tc.endLine()
-        tc.write(">> Objective-C: ",  inColor: .cyan, bold: true)
-        tc.write("\(objc) (\(objcPercentage)%)",  inColor: .red, bold: true)
-        tc.endLine()
+        print("")
+        print("> \(title)".bold)
+        print(">> Swift: ".green.bold, terminator: "")
+        print("\(swift) (\(swiftPercentage)%)".red.bold)
+        print(">> Objective-C: ".green.bold, terminator: "")
+        print("\(objc) (\(objcPercentage)%)".red.bold)
     }
 }

@@ -16,7 +16,7 @@ struct Analyze: ParsableCommand {
     private var paths: [String]
 
     func run() throws {
-        let analyzer = Analyzer(with: path)
+        let analyzer = Analyzer(with: paths)
         printIntro(analyzer: analyzer)
         analyzer.coverages.forEach { $0.write() }
     }
@@ -32,6 +32,6 @@ struct Analyze: ParsableCommand {
     }
 
     private func printMetricsCount(coverages: [Coverage]) {
-        print("We've analyzed your folder with \(coverages.count) metrics:".bold)
+        print("We've analyzed \(paths.count) folder\(paths.count == 1 ? "" : "s") with \(coverages.count) metrics:".bold)
     }
 }
