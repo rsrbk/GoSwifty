@@ -26,8 +26,8 @@ extension Coverage {
         print("")
         print("> \(title)".bold)
         print(">> Swift: ".lightYellow.bold, terminator: "")
-        print("\(swift) (\(swiftPercentage)%)".lightRed.bold)
+        print("\(swift) (\(swiftPercentage)%)".red.bold)
         print(">> Objective-C: ".cyan.bold, terminator: "")
-        print("\(objc) (\(objcPercentage)%)".lightRed.bold)
+        print("\(objc) (\(objcPercentage)%)".red.bold)
     }
 }
