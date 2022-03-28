@@ -15,10 +15,13 @@ struct Analyze: ParsableCommand {
     @Argument(help: "List of folders to analyze")
     private var paths: [String]
 
+    @Option(name: .shortAndLong, help: "The number of decimals for the percentage value.")
+    var decimals: Int = 0
+
     func run() throws {
         let analyzer = Analyzer(with: paths)
         printIntro(analyzer: analyzer)
-        analyzer.coverages.forEach { $0.write() }
+        analyzer.coverages.forEach { $0.write(decimals: decimals) }
     }
 
     private func printIntro(analyzer: Analyzer) {
