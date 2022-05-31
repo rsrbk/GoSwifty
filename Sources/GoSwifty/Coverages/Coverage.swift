@@ -15,19 +15,19 @@ protocol Coverage {
 }
 
 extension Coverage {
-    var swiftPercentage: Int {
+    var swiftPercentage: Double {
         [swift, objc].asPercentage[0]
     }
-    var objcPercentage: Int {
+    var objcPercentage: Double {
         [swift, objc].asPercentage[1]
     }
 
-    func write() {
+    func write(decimals: Int) {
         print("")
         print("> \(title)".bold)
         print(">> Swift: ".green.bold, terminator: "")
-        print("\(swift) (\(swiftPercentage)%)".red.bold)
+        print("\(swift) (\(String(format: "%.\(decimals)f", swiftPercentage))%)".red.bold)
         print(">> Objective-C: ".cyan.bold, terminator: "")
-        print("\(objc) (\(objcPercentage)%)".red.bold)
+        print("\(objc) (\(String(format: "%.\(decimals)f", objcPercentage))%)".red.bold)
     }
 }

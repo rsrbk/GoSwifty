@@ -26,7 +26,7 @@ func numberOfOccurences(at path: String, word: String) -> Int? {
 }
 
 extension Array where Element == Int {
-    var asPercentage: [Int] {
-        self.map { $0 == 0 ? 0 : Int((Float($0) / Float(self.reduce(0, +))) * 100) }
+    var asPercentage: [Double] {
+        self.map { $0 == 0 ? 0 : (Double($0) / Double(self.reduce(0, +))) * 100 }
     }
 }
