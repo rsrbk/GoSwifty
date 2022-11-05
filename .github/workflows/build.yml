@@ -21,6 +21,12 @@ jobs:
         DESTINATION: platform=iOS Simulator,${{ matrix.run-config['simulator'] }}
     steps:
         - uses: actions/checkout@v1
+        - uses: actions/cache@v3
+          with:
+            path: .build
+            key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+            restore-keys: |
+              ${{ runner.os }}-spm-
         - name: Prepare shell
           run: |
             set -o pipefail
