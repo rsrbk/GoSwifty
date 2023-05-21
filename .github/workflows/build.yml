@@ -1,0 +1,36 @@
+name: project
+
+on: ["push", "workflow_dispatch"]
+
+jobs:
+  build-app:
+    name: Build App
+    strategy:
+        fail-fast: false
+        matrix:
+            os: [macos-12]
+            build_type: ['release']
+            run-config:
+                - { xcode_version: '13.4.1', simulator: 'name=iPhone 13 Pro' }
+                - { xcode_version: '14.0.1', simulator: 'name=iPhone 14 Pro' }
+                - { xcode_version: '14.1', simulator: 'name=iPhone 14 Pro' }
+                - { xcode_version: '14.2', simulator: 'name=iPhone 14 Pro' }
+
+    runs-on: ${{ matrix.os }}
+    env:
+        DEVELOPER_DIR: /Applications/Xcode_${{ matrix.run-config['xcode_version'] }}.app/Contents/Developer
+        DESTINATION: platform=iOS Simulator,${{ matrix.run-config['simulator'] }}
+    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/cache@v3
+          with:
+            path: .build
+            key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+            restore-keys: |
+              ${{ runner.os }}-spm-
+        - name: Prepare shell
+          run: |
+            set -o pipefail
+        - name: Build
+          run: |
+           swift build -c release
